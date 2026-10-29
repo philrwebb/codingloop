@@ -1,5 +1,4 @@
 # test_solution.py
-import pytest
 from solution import clean_and_group_words
 
 
@@ -9,7 +8,7 @@ def test_empty_string():
 
 def test_basic_counting():
     # Should normalize case and strip standard trailing punctuation
-    result = clean_and_group_words("Hello, world! Hello.")
+    result = clean_and_group_words("Hello,     world! Hello.")
     assert result.get("hello", 0) == 2
     assert result.get("world", 0) == 1
 
